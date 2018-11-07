@@ -1,13 +1,12 @@
-// let evt;
+let evt;
 
-// document.querySelector(".wrapper").addEventListener("click", function(evt) {
-// 	evt.preventDefault();
-// 	document.querySelector(".one").classList.toggle("animation__revers");
-// 	document.querySelector(".two").classList.toggle("animation__revers");
-// 	document.querySelector(".three").classList.toggle("animation__revers");
-// 	document.querySelector(".four").classList.toggle("animation__revers");
-// })
-
+document.querySelector(".wrapper").addEventListener("click", function(evt) {
+	evt.preventDefault();
+	document.querySelector(".one").classList.toggle("animation__revers");
+	document.querySelector(".two").classList.toggle("animation__revers");
+	document.querySelector(".three").classList.toggle("animation__revers");
+	document.querySelector(".four").classList.toggle("animation__revers");
+})
 
 
 // for (var i = 1 ; i <= 100 ; i++ ) {
