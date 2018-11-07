@@ -1,0 +1,126 @@
+
+/* ------------------------ ОБЩИЕ СТИЛИ ---------------------- */
+/* скрыть любой елемент */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hiden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* ______________________________________-*/
+
+@font-face {
+    font-family: "PTSans";
+    src: url("../fonts/web/ptsans.woff2"),
+         url("../fonts/web/ptsansbold.woff2");
+    font-weight: normal, bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprum.woff2"),
+        url("../fonts/web/cuprumbold.woff2"),
+        url("../fonts/web/cuprumitalic.woff2"),
+        url("../fonts/web/cuprumbolditalic.woff2");
+    font-weight: normal, bold, normal, bold;
+    font-style: normal, normal, italic, italic;
+}
+
+body {
+    font-family: "Cuprum";
+    margin: 0;
+    padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* шапка*/
+
+
+/* новый обьект на сайте */
+.new::before {
+    content: "";
+    width: 60px;
+    height: 59px;
+    position: absolute;
+    background-image: url("../export/new-red.png");
+    top: 0;
+    right: 0;
+	z-index: 9999;
+}
+/* тень блока */
+.shadow:hover,
+.shadow:focus {
+    box-shadow: 0px 10px 25px rgba(41,52,73,0.5);
+    transform: translate(0,1px);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255,255,255);
+    background-color: rgb(238,54,67);
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button:hover,
+.button:focus {
+    background-color: rgb(202,44,55);
+}
+.button:active {
+    background-color: rgb(186,39,50);
+}
+
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 220px;
+    height: 42px;
+    box-sizing: content-box;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+        
+    background-color: #ee3543;
+    font-family: Cuprum;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    border-bottom: 5px solid #b22b31;
+    
+}
+.main-logo:hover,
+.main-logo:focus {
+    background-color: rgb(202,44,55);
+    border-color: rgb(154,33,42);
+    outline: none;
+}
+.main-logo:active{
+    background-color: rgb(186,39,50);
+}
+
+/* ------------------------ КОНЕЦ ОБЩИХ СТИЛЕЙ ---------------------- */
+

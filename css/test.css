@@ -1,0 +1,185 @@
+/* скрыть любой елемент */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hiden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* ______________________________________-*/
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: url("../fonts/web/ptsans.woff2"),
+         url("../fonts/web/ptsansbold.woff2");
+    font-weight: normal, bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprum.woff2"),
+        url("../fonts/web/cuprumbold.woff2"),
+        url("../fonts/web/cuprumitalic.woff2"),
+        url("../fonts/web/cuprumbolditalic.woff2");
+    font-weight: normal, bold, normal, bold;
+    font-style: normal, normal, italic, italic;
+}
+
+body {
+    font-family: "PT Sans Narrow";
+    margin: 0;
+    padding: 0;
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+    width: 25vw;
+    height: 25vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    padding: 0;
+    margin: 0;
+}
+.square {
+    width: 45%;
+    height: 45%;
+    border: 1px solid rgb(0, 128, 0);
+    margin: 5%;
+}
+.one {
+    display: inline-block;
+    background-color: red; 
+    animation-delay: 0s;   
+}
+
+.two {
+    display: inline-block;
+    background-color: rgb(0, 0, 255);
+    animation-delay: .5s;   
+}
+
+.three {
+    display: inline-block;
+    background-color: green;
+    animation-delay: 1s;   
+}
+
+.four {
+    display: inline-block;
+    background-color: yellow;
+    animation-delay: 1.5s;   
+}
+
+@keyframes anime {
+    0% {transform: translate(0, 0) skew(10deg,10deg) scale(1);
+        border-radius: 0;
+    }
+    25% {transform: translate(100%, 0) skew(-10deg,-10deg) scale(.5);
+        border-radius: 50%;
+    }
+    50% {transform: translate(100%, 100%) skew(10deg,10deg) scale(1);
+        border-radius: 0;
+    }
+    75% {transform: translate(0, 100%) skew(-10deg,-10deg) scale(.5);
+        border-radius: 50%;
+    }
+    100% {transform: translate(0, 0) skew(10deg,10deg) scale(1);
+        border-radius: 0;
+    }
+}
+
+@keyframes anime__revers {
+    0% {transform: translate(0, 0) skew(10deg,10deg);
+    }
+    25% {transform: translate(0, 100%) skew(-10deg,-10deg);
+    }
+    50% {transform: translate(100%, 100%) skew(10deg,10deg);
+    }
+    75% {transform: translate(100%, 0) skew(-10deg,-10deg);
+    }
+    100% {transform: translate(0, 0) skew(10deg,10deg);
+    }
+}
+.wrapper:hover .square {
+    animation-play-state: paused;
+}
+
+.animation__forward {
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+.animation__revers {
+    animation-name: anime__revers;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+body{   
+    --keksSize: 3vw;
+}
+
+p {
+    font-size: var(--keksSize);
+}
+
+.conmtainer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.kek-01 {
+    width: 50px;
+    background-color: red;
+    border: 1px solid black;
+    /*order: 1;*/
+}
+
+.kek-02 {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.kek-03 {
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    margin-right: auto;
+    background-color: yellow;
+    border: 1px solid black;
+}
